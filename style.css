@@ -8,4 +8,25 @@ body {
 	font-family: sans-serif;
 	background-color: #222;
 	color: white;
+	padding: 1rem;
+}
+
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	width: 8rem;
+	gap: 1rem;
+}
+
+.cell {
+	aspect-ratio: 1;
+	background-color: cadetblue;
+	width: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.active {
+	background-color: crimson;
 }
