@@ -11,8 +11,9 @@ for (let c = 1; c <= 9; c++) {
 // console.log("Numeri popolato", numeri);
 
 for (const numero of numeri) {
-	// console.log(numero);
-	document.querySelector(".grid").innerHTML += "<div>ciao</div>";
+	// console.log("numeri", numeri);
+	// console.log("numero", numero);
+	document.querySelector(".grid").innerHTML += `<div class="cell">${numero}</div>`;
 }
 
 //Restituisce un intero random tra min e max (inclusi)
