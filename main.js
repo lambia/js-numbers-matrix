@@ -1,6 +1,6 @@
 console.log("Page init");
 
-const numeriGenerati = getRandomIntegers();
+const numeriGenerati = getRandomIntegers(9, 1, 99);
 
 for (const numero of numeriGenerati) {
 	// console.log("numeri", numeri);
@@ -8,13 +8,13 @@ for (const numero of numeriGenerati) {
 	document.querySelector(".grid").innerHTML += `<div class="cell">${numero}</div>`;
 }
 
-function getRandomIntegers() {
+function getRandomIntegers(quantiNumeriGenerare, min, max) {
 	//Crea 9 numeri casuali
 	const numeri = [];
 	// console.log("Numeri iniziale", numeri);
 
-	for (let c = 1; c <= 9; c++) {
-		const numeroCasuale = getRandomInteger(1, 99);
+	for (let c = 1; c <= quantiNumeriGenerare; c++) {
+		const numeroCasuale = getRandomInteger(min, max);
 		numeri.push(numeroCasuale);
 	}
 	// console.log("Numeri popolato", numeri);
