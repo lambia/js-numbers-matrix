@@ -27,7 +27,9 @@ function writeNumbersInPage(numeri, contenitore) {
 
 	for (const numero of numeri) {
 		// console.log("numero", numero);
-		contenitore.innerHTML += `<div class="cell">${numero}</div>`;
+
+		//esempio: <div class="cell" id="numero-33">33</div>
+		contenitore.innerHTML += `<div class="cell" id="numero-${numero}">${numero}</div>`;
 	}
 }
 
@@ -62,6 +64,12 @@ function onButtonClick(event, listaNumeri) {
 
 	if (listaNumeri.includes(userNumber)) {
 		console.log(`Il numero ${userNumber} è presente in lista`);
+
+		const cella = document.querySelector(`#numero-${userNumber}`);
+		console.log(cella);
+
+		cella.classList.add("active");
+
 	} else {
 		console.log(`Il numero ${userNumber} NON è presente in lista`);
 	}
