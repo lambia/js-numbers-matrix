@@ -1,8 +1,16 @@
-console.log("Page init");
+/****************** ALL'AVVIO DELLA PAGINA ****************/
 
-const numeriGenerati = getRandomIntegers(9, 1, 99);
+init();
 
-writeNumbersInPage(numeriGenerati);
+/************************* FUNZIONI ***********************/
+
+//Inizializza la pagina
+function init() {
+
+	const numeriGenerati = getRandomIntegers(9, 1, 99);
+
+	writeNumbersInPage(numeriGenerati);
+}
 
 //Scrive in pagina un array di numeri
 function writeNumbersInPage(numeri) {
@@ -33,3 +41,4 @@ function getRandomIntegers(quantiNumeriGenerare, min, max) {
 function getRandomInteger(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
